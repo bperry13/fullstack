@@ -11,6 +11,7 @@
 ```docker run --rm --name fullstack-frontend --network fullstack-network -p 3000:3000 frontend```
 
 ### Docker Network
+Ran this in the frontend dir before building both backend and frontend
 ```docker network create fullstack-network```
 
 
