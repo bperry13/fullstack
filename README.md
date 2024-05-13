@@ -1,5 +1,15 @@
 # Docker notes
 
+### Steps
+1. Open Docker Desktop or start Docker CLI
+2. Open the backend directory and run the commands below
+```docker build . -t backend```
+```docker run --name fullstack-backend --rm --network fullstack-network -p 8000:8000 backend```
+3. Open a separate cli in the frontend directory and run the commands below
+```docker build . -t frontend```
+```docker run --rm --name fullstack-frontend --network fullstack-network -p 3000:3000 frontend```
+4. Should be working now. If not, build both backend and frontend and try again.
+
 ### Back End
 ```cd backend```
 ```docker build . -t backend```
