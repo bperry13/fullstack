@@ -1,14 +1,16 @@
 # Docker notes
 
 ### Steps
-1. Open Docker Desktop or start Docker CLI
-2. Open the backend directory and run the commands below
+1. Open Docker Desktop or start Docker Engine in CLI
+2. Open the frontend directory and check if the docker network has been created
+```docker network create fullstack-network```
+3. Open a separate termiinal and go to the backend directory and run the commands below
 ```docker build . -t backend```
 ```docker run --name fullstack-backend --rm --network fullstack-network -p 8000:8000 backend```
-3. Open a separate cli in the frontend directory and run the commands below
+4. Go back to the frontend directory and run the commands below
 ```docker build . -t frontend```
 ```docker run --rm --name fullstack-frontend --network fullstack-network -p 3000:3000 frontend```
-4. Should be working now. If not, build both backend and frontend and try again.
+5. Frontend should be working now on http://localhost:3000/api. If not, build both backend and frontend and try again.
 
 ### Back End
 ```cd backend```
